@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counting the words</title>
+</head>
+<body>
+<h1> There are {{count}} words in your entered text</h1>
+<a href="{% url 'home'%}"> Start Again </a>
+
+
+<h1>your text is : </h1>
+{{text}}
+
+<br>
+<h1>Word count</h1>
+{% for word,countotal in wordcountdic %}
+
+
+{{word}}-{{countotal}}
+<br>
+
+{% endfor %}
+
+</body>
+</html>
